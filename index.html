@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+<style>
+	.wang{
+		position: absolute;
+		width: 560px;
+		height: 180px;
+		left: 50%;
+		top: 50%;
+		margin-left: -280px;
+		margin-top: -280px;
+		text-align: center;
+		color: white;
+		font-weight: normal;
+		transition: all 1.5s;
+		transform: scale(0);
+
+	}
+	.wang>h1{
+		font-size: 90px;
+		font-family: '宋体';
+		font-weight: 100;
+		opacity: 0.8;
+
+	}
+	.wang>h2{
+		font-size: 60px;
+		font-family: '宋体';
+		font-weight: 100;
+		line-height: 10px;
+		opacity: 0.8;
+	}
+	.section{
+		position: relative;
+		overflow: hidden;
+	}
+	.tu1{
+		width: 400px;
+		height: 300px;
+		position: absolute;
+		left: 5%;
+		top: 30%;
+		border-radius: 50%;
+		
+		transition: all 1.5s;
+		transform: translateY(450px);
+		opacity: 0.8;
+	}
+	.tu2{
+		width: 500px;
+		height: 300px;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		border-radius: 50%;
+		margin-left: -250px;
+		transition: all 1.5s;
+		transform: translateY(500px);
+		opacity: 0.8;
+	}
+	.tu3{
+		width: 400px;
+		height: 300px;
+		position: absolute;
+		right:5%;
+		top: 30%;
+		border-radius: 50%;
+		transition: all 1.5s;
+		transform: translateY(450px);
+		opacity: 0.8;
+
+	}
+	.active .wang{
+		transition-delay: 0.5s;
+		transform: scale(1);
+	}
+	.active .tu1{
+		transition-delay: 0.7s;
+		transform:translateY(0);
+		
+	}
+	.active .tu2{
+		transition-delay: 0.9s;
+		transform: translateY(0);
+	}
+	.active .tu3{
+		transition-delay: 1.3s;
+		transform: translateY(0);
+	}
+	.wang>h3{
+		font-size: 50px;
+		font-family: '宋体';
+		font-weight: 100;
+		color: white;
+		opacity: 0.8;
+	}
+	.wang>h4{
+		font-size: 50px;
+		font-family: '宋体';
+		font-weight: 100;
+		color: yellow;
+	}
+	.tu2_1{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		left: 100px;
+		top: 40%;
+		transition: all 2s;
+		transform: rotate(90deg) translateX(-600px);
+		border-radius: 10%   10% 10% 10%;
+		opacity: 0.6;
+	}
+	.tu2_2{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		right: 100px;
+		top: 40%;
+		transition: all 2s;
+		border-radius: 10%   10% 10% 10%;
+		transform: rotate(90deg) translateY(-600px);
+		opacity: 0.6;
+	}
+	.tu2_3{
+		width: 820px;
+		height: 325px;
+		position: absolute;
+		bottom:100px;
+		left: 50%;
+		margin-left: -410px;
+		transition: all 1.5s;
+		font-size: 20px;
+		color: white;
+		font-family: '宋体';
+		line-height: 30px;
+		transform: translateY(450px);
+		
+	}
+	.active .tu2_1{
+		transition-delay: 0.7s;
+		transform:  translateX(0);
+
+	}
+	.active .tu2_2{
+		transition-delay: 0.7s;
+		transform: translateX(0);
+	}
+	.active .tu2_3{
+		transition-delay: 0.6s;
+		transform: translateY(0);
+		
+	}
+	.zezhao{
+		width: 100%;
+		height: 100%;
+		background:black;
+		opacity: 0.1;
+		
+	}
+	#fp-nav ul li a span{
+		background: white;
+	}
+	#fp-nav ul li a.active span{
+		background: yellow;
+	}
+	.tianci{
+		width: 500px;
+		height: 240px;
+		border-radius: 10%;
+		opacity: 1;
+		transition: all 2s;
+		transform: translateX(-700px);
+	}
+	.tiancitext{
+		top: 29%;
+		width: 600px;
+		height: 240px;
+		color: white;
+		font-size: 20px;
+		color: white;
+		font-family: '宋体';
+		line-height: 30px;
+		transform:translateX(800px);
+	}
+
+</style>
+</head>
+<body>
+	<div id="dowebok">
+	<div class="section" style="background: url(img/timg.jpg) 50% 70% no-repeat; ">
+	
+		<div class="wang">
+			<h1>芦芽山风景区</h1>
+			<h2>美丽不止于奇</h2>
+		</div>
+		<div class="tu1" style="background: url(img/timg2.jpg) 50% 70% no-repeat; "></div>
+		<div class="tu2" style="background: url(img/timg3.jpg) 50% 0 no-repeat; "></div>
+		<div class="tu3" style="background: url(img/timg4.jpg) 50% 0 no-repeat; "></div>
+		<div class="zezhao"></div>
+	</div>
+	<div class="section" style="background: url(img/timg11.jpg) 0 0 no-repeat;">
+		<div class="wang">
+			<h3>芦芽之巅，会凌云之志</h3>
+		</div>
+		<div class="tu2_1" style="background: url(img/timg8.jpg) 0 0 no-repeat; "></div>
+		<div class="tu2_2" style="background: url(img/timg5.jpg) 100% 0 no-repeat; "></div>
+		<div class="tu2_3" ><p>&nbsp;&nbsp;芦芽山风景名胜区位于吕梁山北端、晋西北腹地，是汾河、桑干河、阳武河、岚漪河、朱家川五条河流的源头区；景区平均海拔2000米以上，先后被命名为国家级地质公园、国家级森林公园、国家级自然保护区、国家级水利旅游风景区。<br>&nbsp;&nbsp;景区内约有82万亩原始次森林、66万亩草原、500多种动植物资源、100多个景点，是一处集山、石、林、草、洞、湖、泉、谷、庙、关十大景观于一体的“北方原始高原型山水形态旅游景区”。现已开发并对外开放的旅游景点包括：万年冰洞、芦芽山、悬崖栈道、石门悬棺、马仑草原、情人谷、天池湖泊群、汾河源头、九重瀑布等9个著名景点。</p></div>
+		<div class="zezhao"></div>
+	</div>
+	<div class="section" style="background: url(img/tianc1.jpg) 0 70% no-repeat; opacity: 0.9;">
+	<div class="zezhao" style="opacity: 0.1"></div>
+		<div class="wang">
+			<h4 style="color: white;opacity: 0.8;">芦芽天池，观天池锦鳞</h4>
+		</div>
+		<div class="tu2_1 tianci" style="background: url(img/timg12.jpg) 0 0 no-repeat; "></div>
+		<div class="tu2_2 tiancitext" style="opacity: 1;"><p>&nbsp;&nbsp;天池位于宁武县城西南20公里海拔1954米的管涔山麓地，是一处高山群湖，有天池、元池、琵琶海、鸭子海、小海子、干海、岭干海、双海、老师傅海等大小天然湖泊15个，总面积约4平方公里，处于海拔1771——1849米之间。<br>&nbsp;&nbsp;天池湖群，高山环绕，树木掩映，湖水清澈。在这些湖泊中，最大的是天池，古称祁莲池，唐代曾在此设立天池牧监，为朝廷饲牧军马，故又称马营海。面积0．8平方公里，水深10米左右，蓄水800万立方米。<br>&nbsp;&nbsp;据记载，天池水“阴霖不溢，阳旱不涸，澄亭如鉴”。传说，每遇树叶杂草飘落湖面，便有灵鸟飞临噙去，故湖水清澈可鉴。天池风光秀丽，池中盛产鲤鱼。炎夏鲤鱼腾跃水面，泛起层层涟漪，波光粼粼，被称为“天池锦鳞”一景。</p></div>
+		
+	</div>
+	
+</div>
+</body>
+</html>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		'navigation': true,
+		navigationTooltips:['1','2','3'],
+		navigationColor:'white',
+	});
+});
+</script>
